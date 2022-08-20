@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA DE ADIVINACIÓN</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");
+        document.write("<hr>");   
+        document.write("<br>");   
+        document.write("<br>");       
+    }  
+    function imprimir(message) {
+        document.write(message);
+        saltarLinea();
+    }
+    
+    var colum = parseInt(prompt("Ingrese el numero de columnas"));
+    var filas = parseInt(prompt("Ingrese el numero de filas"));
+    
+    for (let i = 1; i <= filas; i++) {
+        for (let j = 1; j <= colum; j++){
+            document.write("     *     ");
+        }
+        document.write("<br>")
+    }
+
+</script>

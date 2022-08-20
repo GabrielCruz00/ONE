@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA - MEDIA DE EDADES</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<hr>");   
+        document.write("<br>");   
+    }  
+    function imprimir(message) {
+        document.write(message);
+        saltarLinea();
+    }
+
+    // var padre = 40;
+    // var madre = 30
+    // var hijo = 15
+    // var hija = 13
+
+    // var promedio = (padre+madre+hijo+hija)/4;
+    // imprimir("El promedio es " + promedio);
+
+    // var miembros = parseInt(prompt("Ingrese la cantidad de miembros de la familia"));
+    // var acumulado = 0
+
+    // for(let i = 1; i <= miembros; i++) {
+    //     var edad = parseInt(prompt("Ingrese la edad"));
+    //     acumulado += edad;
+    // }
+
+    // var promedio = acumulado / miembros;
+
+    // imprimir("El promedio de " + miembros + " miembros(s), es: " + promedio);
+
+    // Ejercicio imprimir numeros pares del 0 al 100
+    var numero = 2;
+    while(numero <= 100) {
+        imprimir(numero);
+        numero += 2;
+    }
+    imprimir("FIN");
+</script>
