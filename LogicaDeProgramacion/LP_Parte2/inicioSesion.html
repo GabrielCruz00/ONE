@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");   
+        document.write("<br>");       
+    }  
+    function imprimir(message) {
+        document.write(message);
+        saltarLinea();
+    }
+
+    var inicioDeSesionRegistrado = "tlacua";
+    var contrasenhaRegistrada = "tlacua00";
+
+    for ( let intento = 1; intento <= 3; intento++){
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+        if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+            break;
+        } else {
+            alert("inicio de sesión inválido. Favor intente de nuevo");
+        }
+    }
+    if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+        imprimir("<hr>")
+        imprimir("Bienvenido al sistema " + inicioDeSesionIngresado);
+        imprimir("<br><hr>")
+    } else {
+        imprimir("<hr>")
+        imprimir("Usuario y contraseña invalidos. <br>");
+        imprimir("Si cree es que un error, por favor comuniquese con servicio tecnico.")
+        imprimir("<br><hr>")
+    }
+</script>
