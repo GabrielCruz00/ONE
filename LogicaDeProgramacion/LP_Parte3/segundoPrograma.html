@@ -1,0 +1,18 @@
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+    
+    drawSquare();
+    
+    function drawSquare(){
+        var screen = document.querySelector('canvas');
+        var pencil = screen.getContext('2d');
+
+        pencil.fillStyle = 'green';
+        pencil.fillRect(0,0,50,50);
+        pencil.strokeStyle = 'black';
+        pencil.strokeRect(0,0,50,50);
+    }
+</script>
