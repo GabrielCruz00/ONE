@@ -4,17 +4,16 @@
 
 <script>
     
-    drawSquare(0,0,'red');
-    drawSquare(0,50,'yellow');
-    drawSquare(0,100,'green');
+    drawSquare(4,50);
     
-    function drawSquare(x,y,color){
+    function drawSquare(n,s){
         var screen = document.querySelector('canvas');
         var pencil = screen.getContext('2d');
-
-        pencil.fillStyle = color;
-        pencil.fillRect(x,y,50,50);
-        pencil.strokeStyle = 'black';
-        pencil.strokeRect(x,y,50,50);
+        for(var i = 1; i <= (n*s); i+=s){
+            pencil.fillStyle = 'green';
+            pencil.fillRect(i,0,s,s);
+            pencil.strokeStyle = 'black';
+            pencil.strokeRect(i,0,s,s);
+        }
     }
 </script>
