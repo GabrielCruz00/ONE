@@ -4,15 +4,17 @@
 
 <script>
     
-    drawSquare();
+    drawSquare(0,0,'red');
+    drawSquare(0,50,'yellow');
+    drawSquare(0,100,'green');
     
-    function drawSquare(){
+    function drawSquare(x,y,color){
         var screen = document.querySelector('canvas');
         var pencil = screen.getContext('2d');
 
-        pencil.fillStyle = 'green';
-        pencil.fillRect(0,0,50,50);
+        pencil.fillStyle = color;
+        pencil.fillRect(x,y,50,50);
         pencil.strokeStyle = 'black';
-        pencil.strokeRect(0,0,50,50);
+        pencil.strokeRect(x,y,50,50);
     }
 </script>
