@@ -1,0 +1,22 @@
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+    var screen = document.querySelector('canvas');
+    var pencil = screen.getContext('2d');
+
+    pencil.fillStyle = 'darkgreen';
+    //Rectangulo 1: 350x300 px
+    pencil.fillRect(125,50,350,300); //(x inicial, y inicial, longitud, altura)
+    
+    pencil.fillStyle = "black";
+    //Rectangulos 2 y 3: 90x90 px
+    pencil.fillRect(335,105,90,90);
+    pencil.fillRect(175,105,90,90);
+    // Rectangulo 4: 70x100 px
+    pencil.fillRect(265,195,70,100);
+    // Rectangulos 5 y 6: 40x110 px
+    pencil.fillRect(225,240,40,110);
+    pencil.fillRect(335,240,40,110);
+</script>
