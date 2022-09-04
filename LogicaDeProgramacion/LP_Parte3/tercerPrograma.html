@@ -1,0 +1,23 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var screen = document.querySelector('canvas');
+    var pencil = screen.getContext('2d');
+
+    pencil.fillStyle = 'grey';
+    pencil.fillRect(0,0,600,400);
+
+    screen.onclick = userClick;
+
+    function userClick(click) {
+        var x = click.pageX - screen.offsetLeft;
+        var y = click.pageY - screen.offsetTop;
+
+        pencil.fillStyle = 'white';
+        pencil.beginPath();
+        pencil.arc(x,y,10,0,2*3.14); //arc(x,y,radio,angulo inicial, angulo final)
+        pencil.fill();
+
+        console.log(x + ', ' + y);
+    }
+</script>
