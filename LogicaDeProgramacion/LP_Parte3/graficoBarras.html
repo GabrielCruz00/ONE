@@ -6,6 +6,21 @@
     var serie2019 = [81, 9, 3, 3, 4];
     var colors = ['blue', 'green', 'yellow', 'red', 'gray'];
 
+    drawBar(50,50,serie2009,colors,'2009');
+    drawBar(150,50,serie2019,colors,'2019');
+
+    function drawBar(x,y,serie,colors,text) {
+        var ySum = y;
+
+        writeText(x,y-10,text);
+        for(var i=0; i < serie.length; i++){
+
+            var height = serie[i];
+            drawRec(x,ySum,50,height,colors[i]);
+            ySum += serie[i];
+        }
+    }
+
     function drawRec(x,y,base,height,color) {
         var screen = document.querySelector('canvas');
         var pencil = screen.getContext('2d');
