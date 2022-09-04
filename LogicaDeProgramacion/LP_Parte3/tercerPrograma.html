@@ -6,18 +6,26 @@
 
     pencil.fillStyle = 'grey';
     pencil.fillRect(0,0,600,400);
+    var colors = ['blue','red','green','yellow'];
+    var color = 0;
 
     screen.onclick = userClick;
+    screen.oncontextmenu = changeColor;
 
     function userClick(click) {
         var x = click.pageX - screen.offsetLeft;
         var y = click.pageY - screen.offsetTop;
 
-        pencil.fillStyle = 'white';
+        pencil.fillStyle = colors[color];
         pencil.beginPath();
         pencil.arc(x,y,10,0,2*3.14); //arc(x,y,radio,angulo inicial, angulo final)
         pencil.fill();
-
-        console.log(x + ', ' + y);
+    }
+    function changeColor(click) {
+        color++;
+        if(color >= colors.length){
+            color = 0;
+        }
+        return false;
     }
 </script>
