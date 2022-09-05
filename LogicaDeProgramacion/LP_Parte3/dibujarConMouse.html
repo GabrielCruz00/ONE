@@ -3,7 +3,8 @@
 <script>
     var screen = document.querySelector('canvas');
     var pencil = screen.getContext('2d');
-    var draw = false;    
+    var draw = false;
+    var colors = ['red','green','blue'];
 
     pencil.fillStyle = 'lightgrey';
     pencil.fillRect(0,0,600,400);
@@ -11,7 +12,16 @@
     screen.onmousemove = drawCircle;
     screen.onmousedown = enable;
     screen.onmouseup = disable;
-        
+    drawPalete();
+    
+    function drawPalete(){
+        var x = 0;
+        for(var i=0; i < colors.length; i++) {
+            pencil.fillStyle = colors[i];
+            pencil.fillRect(x,0,50,50);
+            x+=50;
+        }
+    }
     function drawCircle(event) {
         
         if(draw){
