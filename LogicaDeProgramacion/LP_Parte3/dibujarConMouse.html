@@ -1,0 +1,37 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var screen = document.querySelector('canvas');
+    var pencil = screen.getContext('2d');
+    var draw = false;    
+
+    pencil.fillStyle = 'lightgrey';
+    pencil.fillRect(0,0,600,400);
+    
+    screen.onmousemove = drawCircle;
+    screen.onmousedown = enable;
+    screen.onmouseup = disable;
+        
+    function drawCircle(event) {
+        
+        if(draw){
+            var x = event.pageX - screen.offsetLeft;
+            var y = event.pageY - screen.offsetTop;
+            pencil.fillStyle = 'blue';
+            pencil.beginPath();
+            pencil.arc(x,y,5,0,2*Math.PI);
+            pencil.fill();
+        }
+    }
+    function clearScreen() {
+        pencil.clearRect(0,0,600,400);
+        pencil.fillStyle = 'lightgrey';
+        pencil.fillRect(0,0,600,400);
+    }
+    function enable() {
+        draw = true;
+    }
+    function disable() {
+        draw = false;
+    }
+</script>
