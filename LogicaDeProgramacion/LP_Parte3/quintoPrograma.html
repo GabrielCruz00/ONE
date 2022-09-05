@@ -8,21 +8,33 @@
     pencil.fillRect(0,0,600,400);
 
     setInterval(randomCircle,1000);
+    screen.onclick = shoot;
 
+    var randomX;
+    var randomY;
+    var rad = 10; 
+    function shoot(click){
+        var shotX = click.pageX - screen.offsetLeft;
+        var shotY = click.pageY - screen.offsetTop;
+
+        if((shotX < randomX+rad) && (shotX > randomX-rad) &&
+            (shotY < randomY+rad) && (shotY > randomY-rad)) {
+                alert('Tiro acertado');
+            }
+    }
     function randomCircle(){
         clearScreen();
-        var x = Math.floor(Math.random()*600);
-        var y = Math.floor(Math.random()*400);
-        var radius = 10;
-        drawCircle(x,y,radius + 20,'red');
-        drawCircle(x,y,radius + 10,'white');
-        drawCircle(x,y,radius,'red');
+        randomX = Math.floor(Math.random()*600);
+        randomY = Math.floor(Math.random()*400);
+        drawCircle(randomX,randomY,rad + 20,'red');
+        drawCircle(randomX,randomY,rad + 10,'white');
+        drawCircle(randomX,randomY,rad,'red');
 
     }
-    function drawCircle(x,y,radius,color) {
+    function drawCircle(x,y,rad,color) {
         pencil.fillStyle = color;
         pencil.beginPath();
-        pencil.arc(x,y,radius,0,2*Math.PI);
+        pencil.arc(x,y,rad,0,2*Math.PI);
         pencil.fill();
     }
     function clearScreen() {
