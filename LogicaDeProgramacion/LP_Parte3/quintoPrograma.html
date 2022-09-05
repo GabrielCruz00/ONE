@@ -1,0 +1,33 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var screen = document.querySelector('canvas');
+    var pencil = screen.getContext('2d');
+
+    pencil.fillStyle = 'lightgrey';
+    pencil.fillRect(0,0,600,400);
+
+    setInterval(randomCircle,1000);
+
+    function randomCircle(){
+        clearScreen();
+        var x = Math.floor(Math.random()*600);
+        var y = Math.floor(Math.random()*400);
+        var radius = 10;
+        drawCircle(x,y,radius + 20,'red');
+        drawCircle(x,y,radius + 10,'white');
+        drawCircle(x,y,radius,'red');
+
+    }
+    function drawCircle(x,y,radius,color) {
+        pencil.fillStyle = color;
+        pencil.beginPath();
+        pencil.arc(x,y,radius,0,2*Math.PI);
+        pencil.fill();
+    }
+    function clearScreen() {
+        pencil.clearRect(0,0,600,400);
+        pencil.fillStyle = 'lightgrey';
+        pencil.fillRect(0,0,600,400);
+    }
+</script>
