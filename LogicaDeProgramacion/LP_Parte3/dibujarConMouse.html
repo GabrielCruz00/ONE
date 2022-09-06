@@ -4,7 +4,8 @@
     var screen = document.querySelector('canvas');
     var pencil = screen.getContext('2d');
     var draw = false;
-    var colors = ['red','green','blue'];
+    var color = 0;
+    var colors = ['blue','green','red','white'];
 
     pencil.fillStyle = 'lightgrey';
     pencil.fillRect(0,0,600,400);
@@ -13,21 +14,44 @@
     screen.onmousedown = enable;
     screen.onmouseup = disable;
     drawPalete();
-    
+    screen.onclick = selec;
+
+    function selec(click){
+        var x = click.pageX - screen.offsetLeft;
+        var y = click.pageY - screen.offsetTop;
+        var bottomLimit = 0;
+        var topLimit = 55;
+        for(var i=0; i <= (colors.length)-2 ; i++) {
+            if((x < topLimit) && (x > bottomLimit) &&
+                (y < 55) && (y > 0)) {
+                color = i;
+            }
+            bottomLimit += 55;
+            topLimit += 55;
+        }
+
+        if((x < topLimit) && (x > bottomLimit) &&
+            (y < 55) && (y > 0)) {
+            clearScreen();
+        } 
+    }
     function drawPalete(){
         var x = 0;
         for(var i=0; i < colors.length; i++) {
             pencil.fillStyle = colors[i];
-            pencil.fillRect(x,0,50,50);
-            x+=50;
+            pencil.fillRect(x,0,55,55);
+            x+=55;
         }
+        pencil.font = '15px Georgia';
+        pencil.fillStyle = 'black';
+        pencil.fillText('CLEAR',x-50,30);
     }
     function drawCircle(event) {
         
         if(draw){
             var x = event.pageX - screen.offsetLeft;
             var y = event.pageY - screen.offsetTop;
-            pencil.fillStyle = 'blue';
+            pencil.fillStyle = colors[color];
             pencil.beginPath();
             pencil.arc(x,y,5,0,2*Math.PI);
             pencil.fill();
@@ -37,6 +61,7 @@
         pencil.clearRect(0,0,600,400);
         pencil.fillStyle = 'lightgrey';
         pencil.fillRect(0,0,600,400);
+        drawPalete();
     }
     function enable() {
         draw = true;
