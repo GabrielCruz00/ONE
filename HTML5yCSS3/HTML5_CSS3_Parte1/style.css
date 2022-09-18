@@ -1,7 +1,13 @@
 body{
-    background: #CCCCCC;
+    background: #CCCCCC;    
 }
-h1{
+#banner{
+    width: 100%;
+}
+.principal{
+    padding: 20px;
+}
+h1, h2{
     text-align: center;
 }
 p{
@@ -12,4 +18,19 @@ em strong{
 }
 #mission{
     font-size: 20px;   
+}
+.diferenciales{
+    padding: 30px;
+}
+.item{
+    font-style: italic;
+}
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 20%;
+}
+#diferenciales{
+    width: 50%;
 }
