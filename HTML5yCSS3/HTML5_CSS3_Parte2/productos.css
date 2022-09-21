@@ -33,6 +33,9 @@ nav a:hover{
     color: #E69500;
     text-decoration: underline;
 }
+nav a:active{
+    color: #088c19;
+}
 #products{
     width: 70%;
     margin: 0 auto;
@@ -72,4 +75,14 @@ nav a:hover{
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
+}
+footer{
+    text-align: center;
+    background-image: url("./assets/bg.jpg");
+    padding: 40px;
+}
+.copyright{
+    color: #FFFFFF;
+    font-style: italic;
+    margin: 20px;
 }
