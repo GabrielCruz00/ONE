@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+}
+header{
+    background-color: #CCCCCC;
+    padding: 20px 0;
+}
+.container{
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+}
+h1{
+    margin: 0;
+}
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #E69500;
+    text-decoration: underline;
+}
+nav a:active{
+    color: #088c19;
+}
+#products{
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px;
+}
+#products div{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+        /* border-width: 2px;
+        border-style: solid;
+        border-color: #000000; */
+    border-radius: 15px;
+}
+#products div:hover{
+    border-color: #E69500;
+}
+#products div:active{
+    border-color: #088c19;
+}
+#products h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+#products div:hover h2{
+    font-size: 33px;
+}
+.description{
+    font-size: 18px;
+}
+.price{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+footer{
+    text-align: center;
+    background-image: url("./assets/bg.jpg");
+    padding: 40px;
+}
+.copyright{
+    color: #FFFFFF;
+    font-style: italic;
+    margin: 20px;
+}
