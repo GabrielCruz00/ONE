@@ -1,0 +1,56 @@
+main{
+    width: 70%;
+    margin: 0 auto;
+}
+form{
+    margin: 40px 0px;
+}
+fieldset{
+    border: none;
+}
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+.inputMain, form textarea{
+    display: block;
+    margin: 0 0 20px;
+    padding: 7px;
+    width: 50%;
+}
+select{
+    font-size: 16px;
+}
+.checkbox{
+    margin-top: 25px;
+}
+.enviar{
+    width: 50%;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #28A745;
+    background: transparent;
+    border: 3px solid #28A745;
+    border-radius: 10px;
+    transition: 0.75s all;
+    cursor: pointer;
+}
+.enviar:hover{
+    color: #FFFFFF;
+    background: #28A745;
+    transform: scale(1.05);
+}
+table{
+    margin: 40px;
+    font-size: 16px;
+}
+thead{
+    background-color: #CCCCCC;
+    font-weight: bold;
+}
+th, td{
+    border: 1px solid #CCCCCC;
+    padding: 8px 15px;
+}
