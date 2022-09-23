@@ -87,3 +87,8 @@ footer{
     font-style: italic;
     margin: 20px;
 }
+@media screen and (max-width:480px){
+    nav a{
+        font-size: 1.75em;
+    }
+}

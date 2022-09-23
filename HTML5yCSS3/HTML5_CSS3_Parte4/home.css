@@ -78,3 +78,15 @@
     width: 70%;
     margin: 0 auto;
 }
+
+@media screen and (max-width:480){
+    .principalTitle{
+        font-size: 3em;
+    }
+    .principal div{
+        font-size: 2em;
+    }
+    .item{
+        font-size: 1.25em;
+    }
+}
