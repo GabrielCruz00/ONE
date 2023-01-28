@@ -28,9 +28,13 @@
 
     /* - Footer */
     --background-footer: #333333;
+
+    /* Fuente */
+    --montserrat: 'Montserrat', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
 }
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--open-sans);
 }
 .container {
     padding-left: 6%;
