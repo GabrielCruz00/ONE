@@ -1,0 +1,30 @@
+.banner__image {
+    width: 100%;
+    height: calc(75vh - 72px);
+}
+.banner__tittle {
+    color: #FDFDFD;
+    font-family: Pacifico, cursive;
+    font-size: 5.0625rem;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    top: 50%;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+.about {
+    text-align: center;
+    padding: 2.5rem;
+}
+.about__tittle {
+    color: #8D0606;
+    font-family: Pacifico, cursive;
+    font-size: 3.1875rem;
+}
+.about__description {
+    color: #595959;
+    font-size: 1.75rem;
+    font-weight: 100;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
     <head>
         <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,400,500,700,900" rel="stylesheet" />
         <meta charset="UTF-8" />
@@ -9,6 +9,31 @@
         <link href="./assets/css/normalize.css" rel="stylesheet" />
         <link href="./assets/css/reset.css" rel="stylesheet" />
         <link href="./assets/css/cabecera.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/header.css">
+        <link rel="stylesheet" href="./assets/css/banner.css">
     </head>
-    <body></body>
+    <body>
+        <header class="header">
+            <img class="logo" src="./assets/img/logo.jpg" alt="">
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a class="menu__item-link active" href="#">Inicio</a></li>
+                        <li class="menu__item"><a class="menu__item-link" href="#">Recetas</a></li>
+                        <li class="menu__item"><a class="menu__item-link" href="#">¿Quienes Somos?</a></li>
+                        <li class="menu__item"><a class="menu__item-link" href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </img>
+        </header>
+        <main>
+            <section class="banner">
+                <img src="./assets/img/banner.jpg" alt="" class="banner__image">
+                <h2 class="banner__tittle">Reaproveche mejor los alimentos</h2>
+            </section>
+            <section class="about">
+                <h2 class="about__tittle">Recetas para economizar y ganar salud</h2>
+                <p class="about__description">Nuestra recetas te ayudan a aprovechar mejor los alimentos, economizar, ganar tiempo y practicidad</p>
+            </section>
+        </main>
+    </body>
 </html>
