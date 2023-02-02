@@ -1,11 +1,9 @@
 .banner__image {
     width: 100%;
-    height: calc(75vh - 72px);
 }
 .banner__tittle {
     color: #FDFDFD;
     font-family: Pacifico, cursive;
-    font-size: 5.0625rem;
     position: absolute;
     left: 50%;
     text-align: center;
@@ -25,6 +23,40 @@
 }
 .description__text {
     color: #595959;
-    font-size: 1.75rem;
     font-weight: 100;
+}
+
+@media screen and (min-width: 0) {
+    .banner__image {
+        height: calc(75vh - 51px);
+    }
+    .banner__tittle {
+        font-size: 3rem;
+    }
+    .description__text {
+        font-size: 1.3rem;
+    }
+    .description__tittle {
+        font-size: 2rem;
+    }
+    .description {
+        padding: 2.5rem 1rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .banner__image {
+        height: calc(75vh - 72px);
+    }
+    .banner__tittle {
+        font-size: 5.0625rem;
+    }
+    .description__text {
+        font-size: 1.75rem;
+    }
+    .description__tittle {
+        font-size: 3.1875rem;
+    }
+    .description {
+        padding: 2.5rem;
+    }
 }

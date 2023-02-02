@@ -50,3 +50,27 @@
     color: #595959;
     font-size: 1.25rem;
 }
+
+@media screen and (min-width: 0) {
+    .persona {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .persona {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 0) {
+    .personas {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .personas {
+        flex-direction: row;
+    }
+}
