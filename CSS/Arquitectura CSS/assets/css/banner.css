@@ -14,16 +14,16 @@
     width: 100%;
     transform: translate(-50%, -50%);
 }
-.about {
+.description {
     text-align: center;
     padding: 2.5rem;
 }
-.about__tittle {
+.description__tittle {
     color: #8D0606;
     font-family: Pacifico, cursive;
     font-size: 3.1875rem;
 }
-.about__description {
+.description__text {
     color: #595959;
     font-size: 1.75rem;
     font-weight: 100;
