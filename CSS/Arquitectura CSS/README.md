@@ -1,4 +1,7 @@
-# arquitectura-css
-curso de arquitectura de Alura. 
+# Arquitectura CSS: Descomplicando los problemas
 
-Prototipo: https://www.figma.com/file/ZIZuMVCGh6cE3UQvTbFsuj/alura-bootstrap?node-id=0%3A1
+* Selectores de CSS.
+* Atomic Design.
+* Metodología BEM.
+* Importacion de imagenes.
+* Sitios responsivos. Adaptacion a diferentes tamaños de pantalla.
